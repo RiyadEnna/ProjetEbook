@@ -11,18 +11,21 @@ import com.bumptech.glide.Glide
 class BookViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
     private var bookImageIV: ImageView
     private var bookTitleTV: TextView
+    private var bookAuthorTv: TextView
     private var containerCL: ConstraintLayout
     private var bookmark: ImageView
 
     init {
         bookImageIV = itemView.findViewById(R.id.book_iv)
         bookTitleTV = itemView.findViewById(R.id.book_title_tv)
+        bookAuthorTv = itemView.findViewById(R.id.book_author_tv)
         containerCL = itemView.findViewById(R.id.container)
         bookmark = itemView.findViewById(R.id.bookmark)
     }
 
     fun bind(book: Items, bookItemCallback: BookItemCallback) {
         bookTitleTV.text = book.volumeInfo?.title
+        bookAuthorTv.text = book.volumeInfo?.authors?.get(0)
         Glide.with(bookImageIV.context).load(book.volumeInfo?.imageLinks?.thumbnail)
             .into(bookImageIV)
         containerCL.setOnClickListener {

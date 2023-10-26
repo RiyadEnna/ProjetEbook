@@ -13,6 +13,8 @@ class MainActivity : AppCompatActivity() {
     companion object {
         val bookKey = "bookKey"
         val imageKey = "imageKey"
+        val authorKey = "authorKey"
+        val descriptionKey = "descriptionKey"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

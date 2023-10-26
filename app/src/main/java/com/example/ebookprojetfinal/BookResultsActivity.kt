@@ -84,6 +84,8 @@ class BookResultsActivity : AppCompatActivity() {
         val intent = Intent(this, BookDetailActivity::class.java)
         intent.putExtra(MainActivity.bookKey, data.volumeInfo?.title)
         intent.putExtra(MainActivity.imageKey, data.volumeInfo?.imageLinks?.thumbnail)
+        intent.putExtra(MainActivity.authorKey, data.volumeInfo?.authors?.get(0))
+        intent.putExtra(MainActivity.descriptionKey, data.volumeInfo?.description)
         startActivity(intent)
     }
 }

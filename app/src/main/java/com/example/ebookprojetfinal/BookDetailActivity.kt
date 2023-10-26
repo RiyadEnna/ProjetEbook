@@ -21,8 +21,12 @@ class BookDetailActivity : AppCompatActivity() {
     private fun setViewItems() {
         val bookTitle = intent.getStringExtra(MainActivity.bookKey)
         val bookImage = intent.getStringExtra(MainActivity.imageKey)
+        val bookAuthor = intent.getStringExtra(MainActivity.authorKey)
+        val bookDescription = intent.getStringExtra(MainActivity.descriptionKey)
 
         binding.bookTitleTv.text = bookTitle
+        binding.bookAuthorDetailTv.text = bookAuthor
+        binding.bookDescriptionTv.text = bookDescription
         Glide.with(binding.bookIv.context).load(bookImage)
             .into(binding.bookIv)
     }

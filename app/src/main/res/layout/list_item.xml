@@ -32,6 +32,17 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/book_iv"
                 android:id="@+id/book_title_tv"/>
+
+            <TextView
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/book_title_tv"
+                android:id="@+id/book_author_tv"/>
+
             <ImageView
                 android:id="@+id/bookmark"
                 android:layout_width="40dp"
