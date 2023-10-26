@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EBookProjetFinal</string>
+    <string name="bibliotheque">Bibliotheque</string>
+    <string name="search">Rechercher</string>
+</resources>
